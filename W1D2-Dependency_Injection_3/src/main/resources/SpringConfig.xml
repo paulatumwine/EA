@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="bookService" class="edu.mum.cs544.BookService">
+        <property name="suppliers">
+            <list>
+                <ref bean="amazon"/>
+                <ref bean="barnesAndNoble"/>
+                <ref bean="eBooks"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="amazon" class="edu.mum.cs544.Amazon"/>
+    <bean id="barnesAndNoble" class="edu.mum.cs544.BarnesAndNoble"/>
+    <bean id="eBooks" class="edu.mum.cs544.EBooks"/>
+    <bean id="app" class="edu.mum.cs544.App">
+        <property name="bookService" ref="bookService"/>
+    </bean>
+</beans>
