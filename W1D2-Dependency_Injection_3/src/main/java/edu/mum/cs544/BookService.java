@@ -1,5 +1,6 @@
 package edu.mum.cs544;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
@@ -31,7 +32,8 @@ public class BookService implements IBookService {
 
 	}
 
-	public void setSuppliers(List suppliers) {
+	@Autowired
+	public void setSuppliers(List<IBookSupplier> suppliers) {
 		this.suppliers = suppliers;
 	}
 }
