@@ -7,11 +7,15 @@ import edu.mum.cs544.bank.domain.AccountEntry;
 import edu.mum.cs544.bank.domain.Customer;
 import edu.mum.cs544.bank.service.AccountService;
 import edu.mum.cs544.bank.service.IAccountService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
 public class App {
 	public static void main(String[] args) {
-		IAccountService accountService = new AccountService();
+		ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+		IAccountService accountService = context.getBean("accountService", AccountService.class);
+
 		// create 2 accounts;
 		accountService.createAccount(1263862, "Frank Brown");
 		accountService.createAccount(4253892, "John Doe");
