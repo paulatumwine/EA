@@ -1,0 +1,45 @@
+Default
+To fetch this data from the database took 34254 milliseconds.
+To fetch this data from the database took 34045 milliseconds.
+To fetch this data from the database took 35361 milliseconds.
+
+@LazyCollection(LazyCollectionOption.EXTRA)
+To fetch this data from the database took 21059 milliseconds.
+To fetch this data from the database took 25423 milliseconds.
+To fetch this data from the database took 22817 milliseconds.
+
+@BatchSize(size = 5)
+To fetch this data from the database took 21999 milliseconds.
+To fetch this data from the database took 21627 milliseconds
+To fetch this data from the database took 22227 milliseconds.
+
+@BatchSize(size = 10)
+To fetch this data from the database took 19752 milliseconds.
+To fetch this data from the database took 19067 milliseconds.
+To fetch this data from the database took 20262 milliseconds.
+
+@BatchSize(size = 50)
+To fetch this data from the database took 19874 milliseconds.
+To fetch this data from the database took 19784 milliseconds.
+To fetch this data from the database took 18179 milliseconds.
+
+@Fetch(FetchMode.SUBSELECT)
+To fetch this data from the database took 17953 milliseconds.
+To fetch this data from the database took 14291 milliseconds.
+To fetch this data from the database took 12227 milliseconds.
+
+join fetch
+To fetch this data from the database took 16119 milliseconds.
+To fetch this data from the database took 16376 milliseconds.
+To fetch this data from the database took 14176 milliseconds.
+
+join fetch (with combined query)
+To fetch this data from the database took 16298 milliseconds.
+To fetch this data from the database took 12418 milliseconds.
+To fetch this data from the database took 12998 milliseconds.
+
+Entity Graph
+To fetch this data from the database took 17456 milliseconds.
+To fetch this data from the database took 24157 milliseconds.
+To fetch this data from the database took 16611 milliseconds.
+To fetch this data from the database took 21109 milliseconds.

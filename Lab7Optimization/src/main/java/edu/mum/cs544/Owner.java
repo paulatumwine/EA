@@ -1,5 +1,7 @@
 package edu.mum.cs544;
 
+import org.hibernate.annotations.*;
+
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -11,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 @Entity
+@NamedQuery(name = "Owner.Pets", query = "from Owner o join fetch o.pets p")
 public class Owner {
 	@Id  
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,6 +21,9 @@ public class Owner {
     private String name;
 	@OneToMany (cascade={CascadeType.PERSIST})
 	@JoinColumn (name="clientid")
+//	@LazyCollection(LazyCollectionOption.EXTRA)
+//	@BatchSize(size = 5)
+//	@Fetch(FetchMode.SUBSELECT)
     private List<Pet> pets;
     
 	public Owner() {
