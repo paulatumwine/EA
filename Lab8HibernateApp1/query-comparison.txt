@@ -1,0 +1,42 @@
+Default:
+    select
+        account0_.accountnumber as accountn1_0_,
+        account0_.customer_customerId as customer2_0_
+    from
+        Account account0_
+
+Join Fetch:
+	select
+		distinct account0_.accountnumber as accountn1_0_0_,
+		entrylist1_.entryId as entryId1_1_1_,
+		account0_.customer_customerId as customer2_0_0_,
+		entrylist1_.amount as amount2_1_1_,
+		entrylist1_.date as date3_1_1_,
+		entrylist1_.description as descript4_1_1_,
+		entrylist1_.fromAccountNumber as fromAcco5_1_1_,
+		entrylist1_.fromPersonName as fromPers6_1_1_,
+		entrylist1_.accountnumber as accountn7_1_0__,
+		entrylist1_.entryId as entryId1_1_0__
+	from
+		Account account0_
+	inner join
+		AccountEntry entrylist1_
+			on account0_.accountnumber=entrylist1_.accountnumber
+
+Entity Graph:
+    select
+        account0_.accountnumber as accountn1_0_0_,
+        entrylist1_.entryId as entryId1_1_1_,
+        account0_.customer_customerId as customer2_0_0_,
+        entrylist1_.amount as amount2_1_1_,
+        entrylist1_.date as date3_1_1_,
+        entrylist1_.description as descript4_1_1_,
+        entrylist1_.fromAccountNumber as fromAcco5_1_1_,
+        entrylist1_.fromPersonName as fromPers6_1_1_,
+        entrylist1_.accountnumber as accountn7_1_0__,
+        entrylist1_.entryId as entryId1_1_0__
+    from
+        Account account0_
+    left outer join
+        AccountEntry entrylist1_
+            on account0_.accountnumber=entrylist1_.accountnumber

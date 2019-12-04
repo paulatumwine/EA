@@ -1,8 +1,15 @@
 package edu.mum.cs544.bank.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Date;
 
+@Entity
 public class AccountEntry {
+    @Id
+    @GeneratedValue
+    private long entryId;
     private Date date;
     private double amount;
     private String description;

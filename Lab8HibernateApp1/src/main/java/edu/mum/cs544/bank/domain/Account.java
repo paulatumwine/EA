@@ -1,11 +1,18 @@
 package edu.mum.cs544.bank.domain;
 
+import javax.persistence.*;
 import java.util.*;
 
-
+@Entity
 public class Account {
+    @Id
     private long accountnumber;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "accountnumber")
     private Collection<AccountEntry> entryList = new ArrayList<AccountEntry>();
+
+    @OneToOne(cascade = CascadeType.ALL)
     private Customer customer;
 
 

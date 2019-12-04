@@ -1,6 +1,14 @@
 package edu.mum.cs544.bank.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Customer {
+    @Id
+    @GeneratedValue
+    private long customerId;
     private String name;
 
     public Customer(String name) {
