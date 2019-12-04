@@ -1,18 +1,20 @@
 package edu.mum.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
- 
+
+@Entity
+@Table(name = "authority")
 public class Authority {
 
+	@Id
+	@Column(length = 20)
  	private long id;
 
+	@Column
 	private String username;
- 
+
+	@Column
  	private String authority;
  	
 	 public long getId() {
