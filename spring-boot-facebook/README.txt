@@ -1,0 +1,1 @@
+Change your appid and secret in SocialFacebookController to run this application
