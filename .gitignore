@@ -3,3 +3,5 @@
 dist/
 *.iml
 target/
+.mvn
+mvn*
