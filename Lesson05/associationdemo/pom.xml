@@ -22,7 +22,7 @@
 
 
     <properties>
-        <hibernate.version>5.4.3.Final</hibernate.version>
+        <hibernate.version>5.4.24.Final</hibernate.version>
     </properties>
 
     <dependencies>
